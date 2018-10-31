@@ -1,0 +1,27 @@
+Add express, node middleware
+CRUD Users
+Add login for Users
+Add authorization (?)
+Integrate Eventbrite API
+Render Eventbrite API page for nearby events
+Integrate iTunes Search API
+Create categories for iTunes app results
+Render iTunes API page for relevant apps
+
+Integrate sign language basic lessons
+
+Integrate basic phrases that hard of hearing  might need (think travel guide, basic translator)
+("Hello, I am deaf", "Where is the restroom")
+
+Add bootstrap
+Add front-end:
+- Hero image
+- Hover features
+
+
+
+v0 --------
+v1 --------
+v2 --------
+v3 --------
+v4 --------
