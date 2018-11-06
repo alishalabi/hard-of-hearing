@@ -16,7 +16,13 @@ app.use(methodOverride("_method"))
 // Controllers
 const users = require("./controllers/users")(app)
 
+// Landing page
+app.get("/", (req, res) => {
+  res.render("home")
+})
 
+
+// Listening port
 app.listen(process.env.PORT || 3000, (req, res) => {
   console.log("Listening at port 3000!")
 })
