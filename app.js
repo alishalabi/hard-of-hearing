@@ -1,5 +1,6 @@
 // Initalize
 const express = require("express")
+const methodOverride = require("method-override")
 const app = express()
 const exphbs = require("express-handlebars")
 const mongoose = require('mongoose');
@@ -10,6 +11,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 mongoose.connect('mongodb://localhost/hard-of-hearing')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(methodOverride("_method"))
 
 // // Mock array for testing
 // let users = [
@@ -59,6 +61,24 @@ app.get("/users/:id", (req, res) => {
       res.render("users-show", { user: user })
     })
     .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+// HTTP Request: Edit
+app.get("/users/:id/edit", (req, res) => {
+  User.findById(req.params.id, function(err, user) {
+    res.render("users-edit", { user: user })
+  })
+})
+
+// HTTP Request: Update
+app.put("/users/:id", (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body)
+    .then(user => {
+      res.redirect(`/users/${user._id}`)
+    })
+    .catch(err => {
       console.log(err.message)
     })
 })
