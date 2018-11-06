@@ -83,6 +83,18 @@ app.put("/users/:id", (req, res) => {
     })
 })
 
+// HTTP Request: Delete
+app.delete("/users/:id", (req, res) => {
+  console.log("DELETE user")
+  User.findByIdAndRemove(req.params.id)
+    .then((user) => {
+      res.redirect("/users")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
 
 app.listen(process.env.PORT || 3000, (req, res) => {
   console.log("Listening at port 3000!")

@@ -1,5 +1,14 @@
+<!-- Return home -->
+<a href="/users">Back to Home</a>
+
+<!-- User data -->
 <h1>{{user.name}}</h1>
 <h2>{{user.bio}}</h2>
 
+<!-- Edit user -->
 <p><a href="/users/{{user._id}}/edit">Edit User</a></p>
-<a href="/users">Back to Home</a>
+
+<!-- Delete user -->
+<p><form method="POST" action="/users/{{user._id}}?_method=DELETE">
+  <button type="submit">Delete User</button>
+</form>
