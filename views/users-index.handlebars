@@ -3,6 +3,6 @@
 <a href="/users/new">New User</a>
 
 {{#each users}}
-  <h2>{{this.name}}</h2>
+  <h2><a href="/users/{{this._id}}">{{this.name}}</a></h2>
   <small>{{this.bio}}</small>
 {{/each}}

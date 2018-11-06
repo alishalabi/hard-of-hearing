@@ -45,7 +45,18 @@ app.post("/users", (req, res) => {
   // console.log(req.body);
   User.create(req.body)
     .then((user) => {
-      res.redirect("/users");
+      res.redirect(`/users/${user._id}`);
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+// HTTP Request: Show
+app.get("/users/:id", (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      res.render("users-show", { user: user })
     })
     .catch((err) => {
       console.log(err.message)
