@@ -1,16 +1,15 @@
 const User = require("../models/user")
 
-
 module.exports = function (app) {
 
   // HTTP Request: Index
   app.get("/users", (req, res) => {
     User.find()
       .then(users => {
-        res.render("users-index", { users: users});
+        res.render("users-index", { user: user});
       })
-      .catch(err => {
-        console.log(err);
+      .catch((err) => {
+        console.log(err.message);
       })
   })
 
@@ -21,7 +20,6 @@ module.exports = function (app) {
 
   // HTTP Request: Create
   app.post("/users", (req, res) => {
-    // console.log(req.body);
     User.create(req.body)
       .then((user) => {
         res.redirect(`/users/${user._id}`);
@@ -55,7 +53,7 @@ module.exports = function (app) {
       .then(user => {
         res.redirect(`/users/${user._id}`)
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err.message)
       })
   })
