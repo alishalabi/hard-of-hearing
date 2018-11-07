@@ -1,7 +1,8 @@
 <h1>Phrases</h1>
 
+<a href="/phrases/new">New Phrase</a>
+
 {{#each phrases}}
-  <!-- <h2><a href="/phrases/{{this._id}}">{{this.title}}</a></h2> -->
-  <h1>{{this.title}}</h1>
+  <h2><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
   <small>{{this.content}}</small>
 {{/each}}

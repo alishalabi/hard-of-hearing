@@ -4,3 +4,11 @@
 <!-- Phrase Data -->
 <h1>{{phrase.title}}</h1>
 <h2>{{phrase.content}}</h2>
+
+<!-- Edit Phrase -->
+<p><a href="/phrases/{{phrase._id}}/edit">Edit Phrase</a></p>
+
+<!-- Delete Phrase -->
+<p><form method="POST" action="/phrases/{{phrase._id}}?_method=DELETE">
+  <button type="submit">Delete Phrase</button>
+</form>

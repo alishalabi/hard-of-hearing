@@ -41,9 +41,37 @@ module.exports = function (app) {
   })
 
   //HTTP Request: Edit
+  app.get("/phrases/:id/edit", (req, res) => {
+    // Phrase.findById(req.params.id)
+    //   .then((phrase) => {
+    //     res.render("phrases-edit", { phrase: phrase })
+    //   })
+    Phrase.findById(req.params.id, function(err, phrase) {
+      res.render("phrases-edit", { phrase: phrase })
+    })
+  })
 
   //HTTP Request: Update
+  app.put("phrases/:id", (req, res) => {
+    Phrase.findByIAndUpdate(req.params.id, req.body)
+      .then(phrase => {
+        res.redirect(`/phrases/${phrase._id}`)
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+  })
 
   //HTTP Request: Delete
+  app.delete("/phrases/:id", (req, res) => {
+    console.log("DELETE phrase")
+    Phrase.findByIdAndRemove(req.params.id)
+      .then(phrase => {
+        res.redirect("/phrases")
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+  })
 
 }

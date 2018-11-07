@@ -6,7 +6,7 @@ module.exports = function (app) {
   app.get("/users", (req, res) => {
     User.find()
       .then(users => {
-        res.render("users-index", { user: user});
+        res.render("users-index", { users: users});
       })
       .catch((err) => {
         console.log(err.message);
