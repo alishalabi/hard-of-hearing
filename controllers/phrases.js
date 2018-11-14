@@ -52,8 +52,8 @@ module.exports = function (app) {
   })
 
   //HTTP Request: Update
-  app.put("phrases/:id", (req, res) => {
-    Phrase.findByIAndUpdate(req.params.id, req.body)
+  app.put("/phrases/:id", (req, res) => {
+    Phrase.findByIdAndUpdate(req.params.id, req.body)
       .then(phrase => {
         res.redirect(`/phrases/${phrase._id}`)
       })
