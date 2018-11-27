@@ -26,9 +26,11 @@ Categories:
 4. Emergencies
 5. Shopping
 
-Problem with Categories:
-Hardcoding to have capital letters
-Syntax errors in URL - is very case-sensitive
+Problems:
+Hardcoding categories to have capital letters
+Syntax errors in URL (categories)- is very case-sensitive
+Phrase edit form: not pre-populating
 
-Free French Phrasebook:
-https://www.etudfrance.com/my%20files/FRENCH%20visual%20phrasebook.pdf
+Online Phrasebooks:
+- French: https://www.etudfrance.com/my%20files/FRENCH%20visual%20phrasebook.pdf
+- ASL: http://www.signmedia.com/doc/masl_unit1fng.pdf

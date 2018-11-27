@@ -1,16 +1,24 @@
 <fieldset>
   <legend>Phrase:</legend>
-  <p>
-    <label for="phrase-title">Title</label><br>
-    <input id="phrase-title" type="text" name="title" />
-  </p>
-  <p>
-    <label for="phrase-content">Content</label><br>
-    <input id="phrase-content" type="text" name="content" />
-  </p>
+
+  <div class="form-group">
+    <p>
+      <label for="phrase-title">Title</label><br>
+      <input id="phrase-title" type="text" name="title" required/>
+    </p>
+  </div>
+
+  <div class="form-group">
+    <p>
+      <label for="phrase-content">Content</label><br>
+      <input id="phrase-content" type="text" name="content" required/>
+    </p>
+  </div>
+
+<div class="form-group">
   <p>
     <label for="phrase-category">Category</label><br />
-    <select name="category">
+    <select name="category" required>
       <option value="Eating Out">Eating out</option>
       <option value="Getting Around">Getting around</option>
       <option value="Essentials">Essentials</option>
@@ -19,4 +27,6 @@
       <option value="Other">Other</option>
     </select>
   </p>
+</div>
+
 </fieldset>

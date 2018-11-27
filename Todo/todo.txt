@@ -30,3 +30,6 @@ Integrate basic phrases that hard of hearing  might need (think travel guide, ba
 ("Hello, I am deaf", "Where is the restroom")
 v3 --------
 v4 --------
+
+
+Idea: Button on each phrase (prefice)
