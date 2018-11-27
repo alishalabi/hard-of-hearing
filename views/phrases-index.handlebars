@@ -2,7 +2,11 @@
 
 <a href="/phrases/new">New Phrase</a>
 
-{{#each phrases}}
-  <h2><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
-  <small>{{this.content}}</small>
-{{/each}}
+<div class="phrases">
+  <div class="phrase-card">
+    {{#each phrases}}
+      <h2 class="phrase-title"><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
+      <small>{{this.content}}</small>
+    {{/each}}
+  </div>
+</div>

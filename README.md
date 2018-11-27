@@ -18,3 +18,17 @@ Priorities:
 - Node
 - Uniform containers
 - Automatic testing (medium)
+
+Categories:
+1. Eating out
+2. Getting around
+3. Essentials
+4. Emergencies
+5. Shopping
+
+Problem with Categories:
+Hardcoding to have capital letters
+Syntax errors in URL - is very case-sensitive
+
+Free French Phrasebook:
+https://www.etudfrance.com/my%20files/FRENCH%20visual%20phrasebook.pdf

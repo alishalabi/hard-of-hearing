@@ -16,10 +16,12 @@ app.set('view engine', 'handlebars');
 mongoose.connect('mongodb://localhost/hard-of-hearing')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride("_method"))
+app.use(express.static('public'))
 
 // Controllers
-const users = require("./controllers/users")(app)
-const phrases = require("./controllers/phrases")(app)
+require("./controllers/users")(app)
+require("./controllers/phrases")(app)
+require("./controllers/categories")(app)
 
 // Landing page
 app.get("/", (req, res) => {
