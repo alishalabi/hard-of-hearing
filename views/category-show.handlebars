@@ -1,13 +1,11 @@
 <div class="row">
+  <div class="panel panel-default col-sm-6 col-sm-offset-3">
 
-
-  <div class="panel panel-default col-sm-3 col-sm-offset-5">
     <!-- Return Home -->
-    <a href="/categories/{{phrase.category}}">Back To {{phrase.category}}</a>
+    <a href="/categories">Back To All Categories</a>
 
     <!-- Phrase Data -->
     <h1>{{phrase.title}}</h1>
-    <h3>Category: {{phrase.category}}</h3>
     <p>{{phrase.content}}</p>
 
     <!-- Edit Phrase -->
@@ -17,6 +15,6 @@
     <p><form method="POST" action="/phrases/{{phrase._id}}?_method=DELETE">
       <button type="submit">Delete Phrase</button>
     </form>
-  </div>
 
+  </div>
 </div>

@@ -1,8 +1,20 @@
-<h1>Phrases</h1>
+<div class="row">
+  <a href="/categories">Back To All Categories</a>
+</div>
 
-<a href="/phrases/new">New Phrase</a>
+<!-- <h1>Phrases</h1> -->
 
-{{#each phrases}}
-  <h2><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
-  <small>{{this.content}}</small>
-{{/each}}
+<!-- <div class="row">
+  <a href="/phrases/new">New Phrase</a>
+</div> -->
+
+<div class="row phrases">
+  <div class="phrase-card">
+    {{#each phrases}}
+      <div class="panel panel-default col-sm-3">
+        <h2 class="phrase-title"><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
+        <small>{{this.content}}</small>
+      </div>
+    {{/each}}
+  </div>
+</div>

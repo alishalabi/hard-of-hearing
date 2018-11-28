@@ -1,9 +1,13 @@
-<form method="POST" action="/phrases/{{phrase._id}}?_method=PUT">
+<div class="row">
+  <div class="panel panel-default col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/phrases/{{phrase._id}}?_method=PUT">
 
-  {{> phrases-form}}
+      {{> phrases-form}}
 
-  <!-- BUTTON -->
-  <p>
-    <button type="submit">Save Phrase</button>
-  </p>
-</form>
+      <!-- BUTTON -->
+      <p>
+        <button type="submit">Save Phrase</button>
+      </p>
+    </form>
+  </div>
+</div>
