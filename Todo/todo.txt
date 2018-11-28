@@ -32,4 +32,6 @@ v3 --------
 v4 --------
 
 
-Idea: Button on each phrase (prefice)
+Ideas:
+- Button on each phrase (prefice)
+- Add 
