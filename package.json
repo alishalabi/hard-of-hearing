@@ -1,0 +1,33 @@
+{
+  "name": "hard-of-hearing",
+  "version": "1.0.0",
+  "description": "Technologies: - Database: Mongo - Web language: Javascript - Web Environment: Node.js - Web Framework (HTTP Protocols): Express.js",
+  "engines": {
+    "node": "8.9.4"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eventbrite": "^1.0.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.9",
+    "nodemon": "^1.18.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start" : "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alishalabi/hard-of-hearing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alishalabi/hard-of-hearing/issues"
+  },
+  "homepage": "https://github.com/alishalabi/hard-of-hearing#readme"
+}

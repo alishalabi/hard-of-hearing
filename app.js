@@ -6,6 +6,7 @@ const exphbs = require("express-handlebars")
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser') // Required for POST methods
 const eventbrite = require("eventbrite")
+const port = process.env.PORT || 3000;
 // const config = require("./config");
 // const eventKey = config.OAuth_key
 // const sdk_event = eventbrite({ token : eventKey})
@@ -13,7 +14,7 @@ const eventbrite = require("eventbrite")
 // Middleware
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-mongoose.connect('mongodb://localhost/hard-of-hearing')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hard-of-hearing')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride("_method"))
 app.use(express.static('public'))
@@ -35,6 +36,4 @@ app.get("/", (req, res) => {
 // sdk_event.request()
 
 // Listening port
-app.listen(process.env.PORT || 3000, (req, res) => {
-  console.log("Listening at port 3000!")
-})
+app.listen(port) 
