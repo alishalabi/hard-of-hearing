@@ -5,3 +5,20 @@
 h2 {
   color: red;
 } */
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  color: #2b333e;
+  padding: 0.1% 100px 10px 100px;
+  /* position: fixed; */
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  z-index: 2;
+}
