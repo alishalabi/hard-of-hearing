@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="panel panel-default col-sm-6 col-sm-offset-3 border">
 
     <h1>All Categories</h1>
@@ -14,4 +14,41 @@
     </div>
 
   </div>
+</div> -->
+
+<div class="container">
+  <h2>All Categories</h2>
+  <p>Type something in the input field to search the list for specific items:</p>
+  <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+  <br>
+  <ul class="list-group" id="myUL">
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Eating%20Out">Eating Out</a></h2></li>
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Getting%20Around">Getting Around</a></h2></li>
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Essentials">Essentials</a></h2></li>
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Emergencies">Emergencies</a></h2></li>
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Responses">Responses</a></h2></li>
+    <li class="list-group-item"><h2 class="phrase-category"><a href="/categories/Other">Other</a></h2></li>
+  </ul>
 </div>
+
+<script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
