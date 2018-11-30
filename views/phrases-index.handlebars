@@ -1,19 +1,26 @@
 <div class="row">
   <a href="/categories">Back To All Categories</a>
 </div>
-
-<!-- <h1>Phrases</h1> -->
+<br>
+<h1>Phrases</h1>
 
 <!-- <div class="row">
   <a href="/phrases/new">New Phrase</a>
 </div> -->
 
 <div class="row phrases">
-  <div class="phrase-card">
+  <div class="card-deck text-center">
     {{#each phrases}}
-      <div class="panel panel-default col-sm-3">
+      <div class="card">
         <h2 class="phrase-title"><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
         <small>{{this.content}}</small>
+        <br>
+        <div class="btn-group align-items-center">
+          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-primary">2</button>
+          <button type="button" class="btn btn-primary">3</button>
+          <button type="button" class="btn btn-primary">4</button>
+        </div>
       </div>
     {{/each}}
   </div>
