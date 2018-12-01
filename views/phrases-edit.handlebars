@@ -1,13 +1,42 @@
 <div class="row">
-  <div class="panel panel-default col-sm-6 col-sm-offset-3">
+  <!-- <div class="panel panel-default col-sm-6 col-sm-offset-3"> -->
     <form method="POST" action="/phrases/{{phrase._id}}?_method=PUT">
 
-      {{> phrases-form}}
+      <fieldset>
+        <legend>Phrase Edit</legend>
+
+        <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+              <input id="phrase-title" class="form-control" type="text" name="title" placeholder="{{phrase.title}}" required/>
+            </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input id="phrase-content" type="text" class="form-control" name="content" placeholder="{{phrase.content}}" required>
+        </div>
+      <br>
+
+      <div class="form-group">
+        <label class="my-1 mr-2" for="phrase-category">Category:</label>
+        <br>
+        <select name="category" required>
+          <option value="Eating Out">Eating out</option>
+          <option value="Getting Around">Getting around</option>
+          <option value="Essentials">Essentials</option>
+          <option value="Emergencies">Emergencies</option>
+          <option value="Responses">Responses</option>
+          <option value="Other">Other</option>
+        </select>
+
+      </div>
+
+      </fieldset>
 
       <!-- BUTTON -->
       <p>
-        <button type="submit">Save Phrase</button>
+        <button href="/phrases" class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Phrase</button>
       </p>
     </form>
-  </div>
+  <!-- </div> -->
 </div>
