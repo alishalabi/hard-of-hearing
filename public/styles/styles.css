@@ -1,29 +1,33 @@
 @font-face {
   font-family: 'Avenir';
-  src: url("fonts/Avenir.ttc");
+  src: url("http://localhost:3000/fonts/Avenir.ttc");
 }
 
 @font-face {
   font-family: 'Playfair';
-  src: url("fonts/PlayfairDisplay-BoldItalic.ttf");
+  src: url("http://localhost:3000/fonts/PlayfairDisplay-BoldItalic.ttf");
 }
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url("fonts/Avenir Next.ttc");
+  src: url("http://localhost:3000/fonts/Avenir Next.ttc");
 }
 
-/* body {
-  font-family: 'Avenir';
-} */
+/* For Brand Name Text */
+@font-face {
+  font-family: 'Pacifico';
+  src: url("http://localhost:3000/fonts/Pacifico-Regular.ttf");
+}
+
 .navbar {
   border-radius: 0;
-  margin-bottom: 0;
+  margin-bottom: 100px;
   background-color: transparent;
   background: transparent;
   border-color: transparent;
-  color: #2b333e;
+  /* background-color: #505050; */
   padding: 0.1% 0;
+  padding-bottom: 100px:
   position: fixed;
   /* Set the navbar to fixed position */
   top: 0;
@@ -44,43 +48,66 @@
   margin-top: 0px;
 }
 
-.navbar-brand {
+.navbar-brand h1 {
   float: left;
   text-transform: uppercase;
   /* transform: translateY(-50%); */
-  color: #2b333e !important;
-  font-family: 'Avenir';
-  font-size: 1.2em;
+  /* color: #2b333e !important; */
+  color: #84dcc6;
+  font-family: 'Pacifico';
+  font-size: 40px;
 }
 
 .navbar-brand:hover {
-  color: #2b333e !important;
+  color: #34728d !important;
 }
 
-.navbar-brand.scrolled:hover {
-  color: #8796ab !important;
-}
 
 .nav.navbar-nav.navbar-right li a {
-  color: #2b333e;
+  color: #34728d;
   font-size: 1.2em;
   font-family: 'Avenir';
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
   text-decoration: line-through;
-  color: #2b333e;
+  color: #34728d;
 }
-
-.navbar-inverse .navbar-nav.scrolled>li>a:hover, .navbar-inverse .navbar-nav.scrolled>li>a:focus {
-  text-decoration: line-through;
-  color: #8796ab;
-}
-
 
 .top-text {
   font-family: 'Playfair';
   text-align: center;
   /* padding-top: 100px; */
   margin-bottom: 50px;
+}
+.top-text h2 {
+  color: #34728d;
+}
+.top-text h3 {
+  color: #34728d;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 25px;
+}
+.centered a{
+  color: #f1863e;
+  font-size: 40px;
+}
+.centered a:hover {
+  text-decoration: line-through;
+  color: #34728d;
+}
+
+.thumbnail img {
+  filter: saturate(0);
+}
+
+.thumbnail img:hover {
+  filter: saturate(1);
 }

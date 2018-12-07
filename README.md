@@ -1,3 +1,17 @@
+Current Programming Problems:
+- Phrases Index Fix bootstrap Grid
+  - Add search in Phrases Index
+- Play with homepage colors
+- Add images and Image icons
+- Add logic to button routes (Phrase Show 1)
+- Work on mobile CSS
+
+
+Style:
+- font: Avenir, Playfair, Avenir Next
+- Color Pallet: Orange(pop)[R:193, G: 98, B: 65][#f1863e], Teal([#84dcc6]), Light Blue([#d6edff]), Dark Blue([#34728d])
+- Color Website: https://coolors.co/f1863e-34728d-84dcc6-d6edff-acd7ec
+
 Technologies:
 - Database: Mongo
 - Web language: Javascript
