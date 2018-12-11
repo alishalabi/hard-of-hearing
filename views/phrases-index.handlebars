@@ -1,54 +1,70 @@
-<div class="row">
+<!-- <div class="row">
   <a href="/categories">Back To All Categories</a>
-</div>
+</div> -->
 <br>
-<h1>Phrases</h1>
+<h1 class="pharase-top-title">Phrases</h1>
 
 <!-- <div class="row">
   <a href="/phrases/new">New Phrase</a>
 </div> -->
-<div class="container col-sm-4">
-  <div class="row phrases">
-    <div class="card-deck text-center">
+
+<!-- bloc-0 -->
+<div class="bloc l-bloc" id="bloc-0">
+	<div class="container bloc-lg">
+		<div class="row">
       {{#each phrases}}
-        <div class="card">
-          <h2 class="phrase-title"><a href="/phrases/{{this._id}}">{{this.title}}</a></h2>
-          <small>{{this.content}}</small>
-          <br>
-          <div class="btn-group align-items-center">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{this._id}}">Show</button>
-            <button type="button" class="btn btn-primary">2</button>
-            <button type="button" class="btn btn-primary">3</button>
-            <button type="button" class="btn btn-primary">4</button>
-          </div>
-            <!-- Modal -->
-            <div id="{{this._id}}" class="modal fade" role="dialog">
-              <div class="modal-dialog">
+			<div class="col-md-4">
+				<div class="card phrase-card">
+					<div class="card-header phrase-card-header">
+						<h3 class="mg-clear text-center">
+							{{this.title}}
+						</h3>
+					</div>
+					<div class="card-body">
+						<ul class="list-unstyled">
+							<li>
+								<p class="text-center phrase-card-body">
+									{{this.content}}
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer phrase-card-footer">
+						<a href="index.html" class="btn btn-d btn-lg btn-block" data-toggle="modal" data-target="#{{this._id}}">Show</a>
+					</div>
+          <!-- Modal -->
+          <div id="{{this._id}}" class="modal fade vertical-alignment-helper" role="dialog">
+            <div class="modal-dialog vertical-align-center">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">{{this.title}}</h4>
-                  </div>
-                  <div class="modal-body">
-                    <h1 style="color: blue;">{{this.content}}</h1>
-                  </div>
-                  <div class="modal-footer">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-primary">1</button>
-                      <button type="button" class="btn btn-primary">2</button>
-                      <button type="button" class="btn btn-primary">3</button>
-                      <button type="button" class="btn btn-primary">4</button>
-                    </div>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
+              <!-- Modal content-->
+              <div class="modal-content text-center">
+                <div class="modal-header phrase-modal-title">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{{this.title}}</h4>
                 </div>
-
+                <div class="modal-body phrase-modal-content">
+                  <h1>{{this.content}}</h1>
+                </div>
+                <div class="modal-footer">
+                  <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-primary phrase-modal-buttons">1</button>
+                    <button type="button" class="btn btn-primary phrase-modal-buttons">2</button>
+                    <button type="button" class="btn btn-primary phrase-modal-buttons">3</button>
+                    <button type="button" class="btn btn-primary phrase-modal-buttons">4</button>
+                  </div> -->
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
-        </div>
+          </div>
+				</div>
+			</div>
       {{/each}}
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
+<!-- bloc-0 END -->
+
+<!-- ScrollToTop Button -->
+<!-- <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><span class="fa fa-chevron-up"></span></a> -->
+<!-- ScrollToTop Button END-->

@@ -111,3 +111,104 @@
 .thumbnail img:hover {
   filter: saturate(1);
 }
+
+.pharase-top-title{
+  font-family: 'Playfair';
+  color: #34728d;
+  padding-bottom: 30px;
+}
+
+.phrase-card {
+  border-radius: 20px !important;
+}
+.phrase-card-header {
+  border-top-right-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  color: #84dcc6;
+  background-color: #34728d;
+}
+.phrase-card-body {
+  color: #34728d !important;
+}
+
+.phrase-card-footer {
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+
+}
+
+.phrase-card-footer a {
+  border-radius: 20px !important;
+  background-color: #d6edff;
+  color: #f1863e;
+}
+
+.phrase-card-footer a:hover {
+  color: #34728d;
+}
+
+/* .phrase-modal-buttons {
+  background-color: #34728d;
+} */
+.vertical-alignment-helper {
+    display:table;
+    height: 90%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    width:inherit;
+    max-width:inherit;
+    height:inherit;
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+
+.phrase-modal-title {
+  color: #34728d;
+}
+
+.phrase-modal-content {
+  color: #f1863e;
+}
+
+.category-title {
+  font-family: 'Playfair';
+  color: #34728d;
+}
+
+.category-title-subtext {
+  color: #34728d;
+}
+
+.all-categories a{
+  color: #f1863e;
+}
+.all-categories a:hover {
+  text-decoration: none;
+  color: #34728d;
+}
+.phrase-new-title {
+  font-family: 'Playfair';
+  color: #34728d;
+}
+
+.phrase-new-category {
+  color: #f1863e;
+}
+
+.phrase-new-submit {
+  background-color: #f1863e;
+  border-color: #f1863e;
+}
+
+.phrase-new-submit:hover {
+  background-color: #34728d;
+  border-color: #34728d;
+}
